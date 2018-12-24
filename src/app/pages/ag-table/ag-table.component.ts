@@ -60,7 +60,14 @@ export class AgTableComponent implements OnInit {
       { headerName: 'ID', field: 'id', editable: true },
       { headerName: 'Name', field: 'name', checkboxSelection: true, editable: true },
       { headerName: 'Progress', field: 'progress' },
-      { headerName: 'Color', field: 'color' }
+      {
+        headerName: 'Color', field: 'color', cellStyle: function (params) {
+          console.log(params.value);
+          return {
+            color: params.value, backgroundColor: 'white', fontWeight: "bold"
+          };
+        }
+      }
     ];
 
     /*

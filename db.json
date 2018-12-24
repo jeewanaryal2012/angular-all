@@ -147,6 +147,12 @@
       "name": "Isabella L.",
       "progress": "87",
       "color": "olive"
+    },
+    {
+      "id": "11",
+      "name": "Michael Jackson",
+      "progress": "99",
+      "color": "olive"
     }
   ]
 }

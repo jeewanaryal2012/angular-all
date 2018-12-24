@@ -6,7 +6,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-8">
       <button mat-button color="primary" (click)="getSelectedRows()">Get Selected Rows</button>
       <button mat-button color="warn" (click)="deleteSelectedRows()" *ngIf="showDeleteButton">Delete</button>
       <ag-grid-angular #agGrid style="width: 100%; height: 500px;" class="ag-theme-balham" (gridReady)="onGridReady($event)"
@@ -14,7 +14,7 @@
         (rowSelected)="onRowSelected($event)" (cellValueChanged)="cellEdited($event)">
       </ag-grid-angular>
     </div>
-    <div class="col-md-6" *ngIf="showRightSideForm">
+    <div class="col-md-4" *ngIf="showRightSideForm">
       <form [formGroup]="agForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label>ID</label>
