@@ -45,8 +45,9 @@ export class HttpErrorInterceptor implements HttpInterceptor {
 
         const dialogConfig = new MatDialogConfig();
 
-        dialogConfig.disableClose = true;
-        dialogConfig.autoFocus = true;
+        //dialogConfig.disableClose = true;
+        //dialogConfig.autoFocus = true;
+        dialogConfig.data = "some data";
 
         this.dialog.open(ErrorBoxComponent, dialogConfig);
 

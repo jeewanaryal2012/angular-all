@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import {
+  MAT_DIALOG_DATA, MatDialog
+} from "@angular/material";
 
 @Component({
   selector: 'app-error-box',
@@ -7,9 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ErrorBoxComponent implements OnInit {
 
-  constructor() { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any, public dialog: MatDialog) { }
 
   ngOnInit() {
+    console.log(this.data);
   }
 
 }
