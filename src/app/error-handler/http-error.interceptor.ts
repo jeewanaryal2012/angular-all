@@ -47,7 +47,7 @@ export class HttpErrorInterceptor implements HttpInterceptor {
 
         //dialogConfig.disableClose = true;
         //dialogConfig.autoFocus = true;
-        dialogConfig.data = "some data";
+        dialogConfig.data = errorMessage;
 
         this.dialog.open(ErrorBoxComponent, dialogConfig);
 

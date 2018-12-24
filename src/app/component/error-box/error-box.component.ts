@@ -9,11 +9,12 @@ import {
   styleUrls: ['./error-box.component.scss']
 })
 export class ErrorBoxComponent implements OnInit {
-
+  message: string;
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, public dialog: MatDialog) { }
 
   ngOnInit() {
     console.log(this.data);
+    this.message = this.data.message;
   }
 
 }

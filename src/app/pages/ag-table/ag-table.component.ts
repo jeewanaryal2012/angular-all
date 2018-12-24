@@ -79,6 +79,10 @@ export class AgTableComponent implements OnInit {
     });
   }
 
+  reloadTable() {
+    this.fetData();
+  }
+
   fetData() {
     this._tableService.getUsers().subscribe((d) => {
       this.rowData = <any>d;
